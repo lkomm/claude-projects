@@ -1,3 +1,5 @@
+import FaqAccordion from "./components/FaqAccordion";
+
 const faqs = [
   {
     question: "What is Claude Code?",
@@ -58,19 +60,7 @@ export default function Home() {
           <h2 className="mb-8 text-3xl font-bold text-black dark:text-white">
             Claude Code — FAQ
           </h2>
-          <div className="space-y-6">
-            {faqs.map(({ question, answer }) => (
-              <div
-                key={question}
-                className="rounded-xl border border-zinc-200 p-6 dark:border-zinc-800"
-              >
-                <h3 className="mb-2 text-lg font-semibold text-black dark:text-white">
-                  {question}
-                </h3>
-                <p className="text-zinc-600 dark:text-zinc-400">{answer}</p>
-              </div>
-            ))}
-          </div>
+          <FaqAccordion faqs={faqs} />
         </section>
       </main>
     </div>
